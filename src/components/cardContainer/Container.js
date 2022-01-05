@@ -10,7 +10,7 @@ const Container = () => {
     return (
         <div className="card-conatiner row">
             {
-                (repos.length > 1) ? repose.map(repo => (<Card repoData={repo} />)) : <NoData />
+                (repos.length > 1) ? repose.map(repo => (<Card repoData={repo} key={repo.id} />)) : <NoData />
             }
         </div>
     )

@@ -72,7 +72,7 @@ body {
           font-size: 16px;
           color: #434343;
         }
-        a{
+        a {
           font-size: 16px;
           color: #434343;
           text-decoration: none;
@@ -139,7 +139,7 @@ body {
       .pannel-group {
         display: flex;
         align-items: center;
-        p{
+        p {
           height: 50px;
         }
         .text-head {
@@ -186,4 +186,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.repo-card {
+  .card-pill {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.4rem 0.2rem;
+    margin: 0.2rem 0;
+    border-radius: 50px;
+    max-width: 150px;
+    width: 100%;
+    background-color: #434343;
+    border: 1px solid #434343;
+    box-shadow: 5px 5px 8px -4px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s;
+    label,
+    i {
+      color: #ffffff;
+    }
+    label {
+      font-size: 14px;
+    }
+    i {
+      font-size: 16px;
+    }
+  }
+  .card-pill:hover {
+    box-shadow: 5px 5px 8px -4px rgba(0, 0, 0, 0.15);
+    background-color: #fdfdfd;
+    border: 1px solid #ece9e6;
+    word-wrap: break-word;
+    label,
+    i {
+      color: #434343;
+    }
+  }
 }

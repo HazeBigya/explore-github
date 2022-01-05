@@ -1,17 +1,20 @@
 import Paginate from "./SearchPannel/Paginate"
 import { SelectedProvider } from "../context/SelectedContext"
 import { SearchProvider } from '../context/SearchContext'
+import { PageProvider } from "../context/PageContext"
 import SearchBox from "./SearchPannel/SearchBox"
 
 const Search = () => {
     return (
         <div className="container search-container">
-            <SelectedProvider>
-                <SearchProvider>
+            <PageProvider>
+                <SelectedProvider>
+                    <SearchProvider>
                         <SearchBox />
-                </SearchProvider>
-                <Paginate />
-            </SelectedProvider>
+                    </SearchProvider>
+                    <Paginate />
+                </SelectedProvider>
+            </PageProvider>
         </div>
     )
 }

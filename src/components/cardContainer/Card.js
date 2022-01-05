@@ -1,8 +1,17 @@
+import { useContext } from "react"
+import { RepoInfoContext } from "../../context/RepInfoContext"
+import { Link } from "react-router-dom";
 import CardPill from "./CardPill"
 
 const Card = ({ repoData }) => {
+    const [repo, setRepo] = useContext(RepoInfoContext)
+
+    const updateRepository = () => {
+        setRepo(repoData)
+    }
+
     return (
-        <div className="card col-md-4" key={repoData.id}>
+        <div className="card col-md-4">
             <div className="top-pannel">
                 <div className="pannel-group">
                     <label className="text-head">Repository</label>
@@ -29,7 +38,9 @@ const Card = ({ repoData }) => {
                     <label className="sub-text">: {repoData.updated_at}</label>
                 </div>
             </div>
-            <button className="btn btn-card"><i className="fas fa-info-circle me-2"></i> View Details</button>
+            <Link to="/Repository">
+                <button className="btn btn-card" onClick={updateRepository}><i className="fas fa-info-circle me-2"></i> View Details</button>
+            </Link>
         </div>
     )
 }

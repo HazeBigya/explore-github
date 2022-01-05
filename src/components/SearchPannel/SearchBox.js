@@ -2,13 +2,18 @@ import { useState, useContext } from "react"
 import { SearchContext } from "../../context/SearchContext"
 import { SelectedContext } from "../../context/SelectedContext"
 import { RepoContext } from "../../context/RepoContext"
+import { PageContext } from "../../context/PageContext"
+import { useNavigate } from "react-router-dom";
 import git from "../../api/git"
 
 const SearchBox = () => {
     const [searchValue, setSearchValue] = useState('')
     const [search, setSearch] = useContext(SearchContext)
     const [selected, setSelected] = useContext(SelectedContext)
+    const [page, setPage] = useContext(PageContext)
     const [repos, setRepos] = useContext(RepoContext)
+
+    const navigate = useNavigate()
 
     const updateSearchValue = (e) => {
         setSearchValue(e.target.value)
@@ -30,13 +35,15 @@ const SearchBox = () => {
             const response = await git.get("/repo", {
                 params: {
                     q: searchValue,
-                    per_page: selected
+                    per_page: selected,
+                    page: page
                 },
             });
             const results = response.data.data
-            const id=''
+            const id = ''
             setRepos(repos.filter((repos) => (repos.id !== id)))
             setRepos([...repos, results])
+            navigate("/", { replace: true });
         } catch (err) {
             console.log(err)
         }
