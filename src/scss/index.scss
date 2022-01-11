@@ -188,6 +188,7 @@ body {
   align-items: center;
 }
 .repo-card {
+  width: 100%;
   .card-pill {
     display: flex;
     justify-content: space-evenly;
@@ -212,6 +213,7 @@ body {
       font-size: 16px;
     }
   }
+
   .card-pill:hover {
     box-shadow: 5px 5px 8px -4px rgba(0, 0, 0, 0.15);
     background-color: #fdfdfd;
@@ -221,5 +223,70 @@ body {
     i {
       color: #434343;
     }
+  }
+
+  .repo-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    label {
+      font-weight: 600;
+    }
+    .repo-title {
+      label {
+        font-size: 20px;
+        color: #434343;
+      }
+    }
+    .repo-author {
+      label {
+        font-size: 18px;
+        color: #434343;
+      }
+    }
+  }
+
+  .date-pannel {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    label {
+      font-size: 16px;
+      color: #434343;
+      font-weight: 500;
+    }
+  }
+
+  .pill-pannel {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .read-pannel {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    p {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}
+
+.pagination-pannel{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  .btn{
+    border-radius: 40px;
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
 }

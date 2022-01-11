@@ -5,7 +5,7 @@ const Paginate = () => {
     const [selected, setSelected] = useContext(SelectedContext)
 
     const changePagination = async (e) => {
-        setSelected({value: e.target.value})
+        setSelected(e.target.value)
     }
 
     return (

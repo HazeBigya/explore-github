@@ -276,6 +276,10 @@ body {
           align-items: center;
 }
 
+.repo-card {
+  width: 100%;
+}
+
 .repo-card .card-pill {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,5 +327,95 @@ body {
 .repo-card .card-pill:hover label,
 .repo-card .card-pill:hover i {
   color: #434343;
+}
+
+.repo-card .repo-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.repo-card .repo-head label {
+  font-weight: 600;
+}
+
+.repo-card .repo-head .repo-title label {
+  font-size: 20px;
+  color: #434343;
+}
+
+.repo-card .repo-head .repo-author label {
+  font-size: 18px;
+  color: #434343;
+}
+
+.repo-card .date-pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.repo-card .date-pannel label {
+  font-size: 16px;
+  color: #434343;
+  font-weight: 500;
+}
+
+.repo-card .pill-pannel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.repo-card .read-pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.repo-card .read-pannel p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.pagination-pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.pagination-pannel .btn {
+  border-radius: 40px;
+  margin: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 /*# sourceMappingURL=index.css.map */

@@ -29,6 +29,8 @@ const SearchBox = () => {
         searchRepo()
     }
 
+    const initialState = {data: {}}
+
     const searchRepo = async () => {
         setSearch(searchValue)
         try {
@@ -40,9 +42,10 @@ const SearchBox = () => {
                 },
             });
             const results = response.data.data
-            const id = ''
-            setRepos(repos.filter((repos) => (repos.id !== id)))
-            setRepos([...repos, results])
+
+            setRepos(initialState)
+            setRepos({data: results})
+
             navigate("/", { replace: true });
         } catch (err) {
             console.log(err)
